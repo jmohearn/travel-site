@@ -1,8 +1,10 @@
-import { resolve } from 'path';
+const path = require('path')
 
-export const entry = './app/assets/scripts/App.js';
-export const output = {
-    filename: 'bundled.js',
-    path: resolve(__dirname, 'app')
-};
-export const mode = 'development';
+module.exports = {
+    entry: './app/assets/scripts/App.js',
+    output: {
+        filename: 'bundled.js',
+        path: path.resolve(__dirname, 'app')
+    },
+    mode: 'development'
+}
